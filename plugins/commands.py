@@ -46,7 +46,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/TmMainChannel')
             ],[
-            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomoviescollection')
+            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomindzchat')
             ],[
             InlineKeyboardButton('🆘 𝐒𝐔𝐏𝐏𝐎𝐑𝐓', url='https://t.me/Technomindzchat'),
             InlineKeyboardButton('sᴇᴀʀᴄʜ🔎', switch_inline_query_current_chat='')
@@ -101,7 +101,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('📢 𝐉𝐨𝐢𝐧 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/TmMainChannel')
             ],[
-            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomoviescollection')
+            InlineKeyboardButton('♥ﮩ٨ـﮩ му♡gяσυρ ﮩـ٨ﮩ♥', url='https://t.me/technomindzchat')
             ],[
             InlineKeyboardButton('🆘 𝐒𝐔𝐏𝐏𝐎𝐑𝐓', url='https://t.me/Technomindzchat'),
             InlineKeyboardButton('sᴇᴀʀᴄʜ🔎', switch_inline_query_current_chat='')
@@ -163,7 +163,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default 2 hrs
+                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot default 2 hrs
                 await ravi.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
@@ -181,7 +181,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default it is 2hrs
+                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot default it is 2hrs
                 await techno.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
@@ -283,7 +283,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot Default 2hrs
+    await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot Default 2hrs
     await technomindz.delete()
     await client.send_video(
                 chat_id=message.chat.id,
@@ -407,6 +407,12 @@ async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('🗑️Trashed...')
     await message.message.edit('Succesfully Deleted All The Indexed Files 😉')
+  
+@Client.on_message(filters.private & filters.text & ~filters.regex("^/"))
+async def msg_handler(c, m):
+    await m.reply_text(
+        "𓂀 𝕄𝕪 𝕤𝕖𝕣𝕧𝕚𝕔𝕖 𝕀𝕤 𝕊𝕥𝕠𝕡𝕡𝕖𝕕 𝕋𝕙𝕒𝕟𝕜𝕤 𝔽𝕠𝕣 ℝ𝕖𝕞𝕖𝕞𝕓𝕖𝕣𝕚𝕟𝕘 𝕄𝕖 ❤️‍🔥 𓂀\n𝐈𝐟 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐜𝐡𝐢𝐭 𝐜𝐡𝐚𝐭 𝐨𝐫 𝐫𝐞𝐩𝐨𝐫𝐭 𝐚𝐧𝐲 𝐛𝐮𝐠𝐬 𝐲𝐨𝐮 𝐚𝐫𝐞 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐜𝐡𝐚𝐭 𝐡𝐞𝐫𝐞 👉@TechnoMindzChat\n\n𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐂𝐨𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧✨\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel"
+    )
 
 
 @Client.on_message(filters.command('settings'))
